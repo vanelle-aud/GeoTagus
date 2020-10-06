@@ -127,6 +127,7 @@
                             <i class="far fa-circle nav-icon"></i>
                             <p>Ajouter un type de Zone</p>
                         </a>
+
                     </li>
 
                     <li class="nav-item">
