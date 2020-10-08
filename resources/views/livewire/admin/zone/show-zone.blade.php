@@ -1,8 +1,4 @@
 
-
-
-
-
 <div class="container-fluid">
     {{-- Care about people's approval and you will be their prisoner. --}}
 
@@ -64,7 +60,14 @@
 
             <div class="card card-primary">
                 <div class="card-header">
-                    <h3 class="card-title">Zone : {{$zone->nom}}</h3>
+                    <h3 class="card-title">
+                        Zone : {{$zone->nom}}
+                                            
+                    </h3>
+                    <br>
+                    <p class="">{{ $zone->nbr_sommet }} Sommet(s) </p>
+
+                    
                 </div>
                 <!-- /.card-header -->
 
@@ -111,7 +114,14 @@
                                         <!-- /.card-body -->
 
                                     <div class="form-group">
+                                        @if($zone->nbr_sommet === $zone->sommets->count())
+
+                                        <button class="btn btn-success" disabled>Nombre de sommets atteint </button>
+
+                                            @else
                                         <button class="btn btn-primary">Ajouter</button>
+
+                                        @endif
                                     </div>
                                 </form>
                             </div>

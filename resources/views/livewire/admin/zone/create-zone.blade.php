@@ -39,7 +39,7 @@
 
                 <div class="card card-primary">
                   <div class="card-header">
-                    <h3 class="card-title">Ajout Une Zone</h3>
+                    <h3 class="card-title">Ajout d'une Zone</h3>
                   </div>
                   <!-- /.card-header -->
 
@@ -63,7 +63,7 @@
 
                               <div class="col-sm-4">
                                   <div class="form-group">
-                                      <label for="altitude">Altitude limite (Km)</label>
+                                      <label for="altitude">Altitude limite (m)</label>
                                       <input type="number" class="form-control  @error('altitude') is-invalid @enderror" wire:model="altitude"  id="altitude"
                                              name="altitude" value="{{ old('altitude') }}"  placeholder="altitude">
                                       @error('altitude')
@@ -103,7 +103,7 @@
 
                                 @forelse($types as $type)
                                     <option value="{{ $type->id }}">
-                                      {{ $type->nom }}
+                                      {{ $type->intitule }}
                                     </option>
                                     @empty
                                     <option value=""> Aucun Type.</option>

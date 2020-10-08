@@ -37,7 +37,7 @@
                             </td>
                             <td>{{$z->type_zone->nom ?? ''}}</td>
                             <td>{{$z->altitude}}</td>
-                            <td>{{$z->nbr_sommet}}</td>
+                            <td> {{ $z->sommets->count() }} / {{$z->nbr_sommet}} </td>
                             <td>{{$z->description}}</td>
                             <td>
                                 <a href="" class="btn btn-sm btn-primary">

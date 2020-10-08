@@ -1,8 +1,4 @@
 
-
-
-
-
 <div >
 
 
@@ -23,8 +19,8 @@
 
                         <div class="form-group">
                             <label for="intitule">Intitulé de la zone</label>
-                            <input type="text"  wire:model="nom" id="intitule" placeholder="Entrez le nom de la zone"
-                                   class="form-control @error('nom') is-invalid @enderror" name="intitule" value="{{ old('nom') }}"  >
+                            <input type="text"  wire:model="intitule" id="intitule" placeholder="Entrez le nom de la zone"
+                                   class="form-control @error('intitule') is-invalid @enderror" name="intitule" value="{{ old('intitule') }}"  >
                             @error('nom')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -33,9 +29,9 @@
                         </div>
                         <div class="form-group">
                             <label for="commentaire">Description</label>
-                            <textarea  id="commentaire" wire:model="description" class="form-control @error('description') is-invalid @enderror" name="commentaire" >{{ old('description') }}
+                            <textarea  id="commentaire" wire:model="commentaire" class="form-control @error('commentaire') is-invalid @enderror" name="commentaire" >{{ old('commentaire') }}
                         </textarea>
-                            @error('description')
+                            @error('commentaire')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>

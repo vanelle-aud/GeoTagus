@@ -25,8 +25,8 @@
                     @forelse($types as $t)
                     <tr>
                         <th scope="row">{{$loop->index}}</th>
-                        <td>{{$t->nom}}</td>
-                        <td>{{$t->description}}</td>
+                        <td>{{$t->intitule}}</td>
+                        <td>{{$t->commentaire}}</td>
                         <td>
                             <a href="" class="btn btn-sm btn-primary">
                                 <i class="fas fa-edit"></i>

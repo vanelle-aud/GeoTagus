@@ -51,9 +51,12 @@ class ShowZone extends Component
             'longitude' => 'required',
         ]);
 
-        $this->recup($this->latitude, $this->longitude);
-        $this->latitude =0;
-        $this->longitude =0;
+        if($this->zone->nbr_sommet === $this->zone->sommets->count()){
+            $this->recup($this->latitude, $this->longitude);
+            $this->latitude =0;
+            $this->longitude =0;
+        }
+        
 
     }
     public function render()
